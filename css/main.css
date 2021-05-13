@@ -9,6 +9,8 @@
   margin: 0;
   user-select: none;
   -webkit-user-drag: none;
+  color: white;
+
 }
 
 html {
@@ -24,6 +26,7 @@ body {
   align-items: center;
   flex-direction: column;
   overflow-x: hidden;
+  padding: 0 0 1rem 0;
 }
 
 .title {
@@ -92,13 +95,14 @@ form {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 30vh;
+  height: 35vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   transition: 0.3s ease all;
+  gap: 2rem;
 }
 
 form input {
@@ -119,6 +123,43 @@ form input:focus {
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 2rem rgba(128, 255, 255, 0.2);
   transform: translateY(-10px);
+}
+
+form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+form .filters {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+form .filters button {
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: 0.3s ease all;
+}
+
+form .filters button:hover {
+  background: rgba(128, 255, 255, 0.3);
+  box-shadow: 0 10px 2rem rgba(128, 255, 255, 0.3);
+}
+
+form .filters button.active {
+  background: rgba(0, 128, 128, 1);
+}
+
+form .filters button.active:hover {
+  box-shadow: unset;
 }
 /* End Form section */
 
@@ -143,8 +184,8 @@ form input:focus {
 .result ul li {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  width: 7.5rem;
-  height: 7.5rem;
+  width: 8rem;
+  height: 8rem;
   gap: 0.5rem;
   display: flex;
   align-items: center;
@@ -167,7 +208,7 @@ form input:focus {
 }
 
 .result ul li .tag {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
 }
 
 .result ul li .code {
