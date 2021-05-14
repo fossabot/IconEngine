@@ -18,8 +18,11 @@ html {
 }
 
 body {
+  background: content-box no-repeat url("../img/IconEngine_Home_bg.svg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   font-family: "Montserrat", sans-serif;
-  background: #121212;
   font-size: 10px;
   color: white;
   display: flex;
@@ -29,7 +32,7 @@ body {
   padding: 0 0 1rem 0;
 }
 
-.title {
+.title * {
   font-size: 2rem;
   gap: unset;
 }
@@ -37,6 +40,10 @@ body {
 .title span {
   color: teal;
   text-shadow: 0 0 0.5rem teal;
+}
+
+.title .subtitle {
+  font-size: 1rem;
 }
 
 .container {
@@ -78,7 +85,7 @@ nav a {
   transition: 0.3s ease all;
 }
 
-nav a:hover::after {
+nav a:not(.title):hover::after {
   content: '';
   position: absolute;
   height: 2px;
@@ -105,10 +112,6 @@ nav .right {
 
 /* Form section */
 form {
-  background: content-box no-repeat url("../img/IconEngine_Home_bg.svg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
   height: 350px;
   width: 100%;
   display: flex;
@@ -184,19 +187,15 @@ form .filters button:hover {
 }
 
 form .filters button.active {
-  box-shadow:
-    0 0 10px rgba(0, 255, 255, 0.2),
-    inset -5px -5px 10px rgba(0, 255, 255, 0.2),
-    inset 5px 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.3);
 }
 /* End Form section */
 
 /* Result section */
 .result {
-  margin-top: -5vh;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(32, 32, 32, 0.5);
   width: 65vw;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   border-radius: 40px;
   padding: 2rem;
   gap: 2rem;
@@ -282,12 +281,20 @@ form .filters button.active {
   }
   .result {
     margin-top: -5vh;
-    background-color: rgba(255, 255, 255, 0.1);
     width: calc(100vw - 5rem);
-    backdrop-filter: blur(5px);
     border-radius: 40px 40px 0 0;
-    padding: 2rem;
-    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .result {
+    width: 100vw;
+    border-radius: 40px 40px 0 0;
+    padding: 1.5rem 0;
+  }
+
+  .result ul {
+    gap: 1.5rem;
   }
 }
 /* End Medias */
