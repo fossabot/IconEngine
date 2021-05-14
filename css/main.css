@@ -71,11 +71,25 @@ nav {
 }
 
 nav a {
-  display: flex;
-  align-items: center;
   color: white;
   text-decoration: none;
   font-size: 1rem;
+  position: relative;
+  transition: 0.3s ease all;
+}
+
+nav a:hover::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, teal, transparent);
+  bottom: -0.5rem;
+}
+
+nav a div {
+  display: flex;
+  align-items: center;
   gap: 0.5rem;
 }
 
@@ -95,7 +109,7 @@ form {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 35vh;
+  height: 350px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -106,7 +120,10 @@ form {
 }
 
 form input {
-  background: rgba(255, 255, 255, 0.15);
+  background: transparent;
+  box-shadow:
+    -5px -5px 10px rgba(255, 255, 255, 0.1),
+    5px 5px 10px rgba(0, 0, 0, 0.4);
   border: none;
   outline: none;
   color: unset;
@@ -121,8 +138,11 @@ form input {
 
 form input:focus {
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 2rem rgba(128, 255, 255, 0.2);
-  transform: translateY(-10px);
+  box-shadow:
+    -5px -5px 10px rgba(255, 255, 255, 0.1),
+    5px 5px 10px rgba(0, 0, 0, 0.4),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 form input::placeholder {
@@ -130,7 +150,9 @@ form input::placeholder {
 }
 
 form .filters {
-  background: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    -5px -5px 10px rgba(255, 255, 255, 0.1),
+    5px 5px 10px rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   backdrop-filter: blur(5px);
   padding: 1rem 2rem;
@@ -142,7 +164,10 @@ form .filters {
 
 form .filters button {
   border: none;
-  background: rgba(255, 255, 255, 0.15);
+  background: transparent;
+  box-shadow:
+    -5px -5px 10px rgba(255, 255, 255, 0.1),
+    5px 5px 10px rgba(0, 0, 0, 0.4);
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 10px;
@@ -150,16 +175,19 @@ form .filters button {
 }
 
 form .filters button:hover {
-  background: rgba(128, 255, 255, 0.3);
-  box-shadow: 0 10px 2rem rgba(128, 255, 255, 0.3);
+  background: transparent;
+  box-shadow:
+    -5px -5px 10px rgba(255, 255, 255, 0.1),
+    5px 5px 10px rgba(0, 0, 0, 0.4),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 form .filters button.active {
-  background: rgba(0, 128, 128, 1);
-}
-
-form .filters button.active:hover {
-  box-shadow: unset;
+  box-shadow:
+    0 0 10px rgba(0, 255, 255, 0.2),
+    inset -5px -5px 10px rgba(0, 255, 255, 0.2),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 /* End Form section */
 
@@ -171,6 +199,12 @@ form .filters button.active:hover {
   backdrop-filter: blur(5px);
   border-radius: 40px;
   padding: 2rem;
+  gap: 2rem;
+  transition: 0.3s ease all;
+}
+
+.result .icons-number {
+  font-size: 1rem;
 }
 
 .result ul {
@@ -182,24 +216,27 @@ form .filters button.active:hover {
 }
 
 .result ul li {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+  box-shadow:
+    -5px -5px 10px rgba(255, 255, 255, 0.1),
+    5px 5px 10px rgba(0, 0, 0, 0.4),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 20px 0;
   width: 8rem;
   height: 8rem;
-  gap: 0.5rem;
+  gap: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   transition: 0.3s ease all;
-  backdrop-filter: blur(5px);
   overflow: hidden;
 }
 
 .result ul li:hover {
-  background: rgba(128, 255, 255, 0.3);
-  box-shadow: 0 10px 4rem rgba(128, 255, 255, 0.2);
-  transform: translateY(-10px);
+  box-shadow:
+    -5px -5px 10px rgba(255, 255, 255, 0.1),
+    5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .result ul li .icon {
@@ -237,3 +274,20 @@ form .filters button.active:hover {
   opacity: 0;
 }
 /* End Result section */
+
+/* Medias */
+@media only screen and (max-width: 960px) {
+  body {
+    padding: 0;
+  }
+  .result {
+    margin-top: -5vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: calc(100vw - 5rem);
+    backdrop-filter: blur(5px);
+    border-radius: 40px 40px 0 0;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+/* End Medias */
