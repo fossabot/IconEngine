@@ -4,12 +4,12 @@ const filters = document.querySelectorAll("form .filters button");
 const result = document.querySelector(".result");
 const noResult = document.querySelector(".no_result");
 const loading = document.querySelector(".loading");
-const searchBoxY = searchBox.getBoundingClientRect().top;
 let iconsList = document.querySelector(".result .icons_list");
 let iconsNumberElement = document.querySelector(".icons-number");
 let filter = 0;
 let icons = [];
 let iconsNumbers;
+let searchBoxY = searchBox.getBoundingClientRect().top;
 
 function getIcons() {
   //Receive icons from json file
@@ -28,7 +28,7 @@ async function prepareIcons() {
     let code = icons[i].code;
     let tag = icons[i].tag;
 
-    let li = `<li onclick="copy(${i})"><div class="icon">${code}</div><div class="tag">${tag}</div><input type="text" class="code" value='${code}'/>`;
+    let li = `<li class="button" onclick="copy(${i})"><div class="icon">${code}</div><div class="tag">${tag}</div><input type="text" class="code" value='${code}'/>`;
     iconsList.innerHTML += li;
   }
 
@@ -65,11 +65,11 @@ async function prepareIcons() {
     filterButton.onclick = (event) => {
       event.preventDefault();
       filters.forEach((element) => {
-        element.className = "";
+        element.className = "button";
       });
 
       filter = index;
-      filterButton.className = "active";
+      filterButton.className = "button active";
       search();
     };
   }
