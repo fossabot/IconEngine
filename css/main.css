@@ -43,7 +43,7 @@ body {
 
 .subtitle {
   font-size: 1rem;
-  width: 400px;
+  max-width: 400px;
   text-align: center;
 }
 
@@ -145,14 +145,14 @@ form input {
 form input.scrolled {
   position: fixed;
   top: 0;
-  width: calc(100% - 4rem);
+  width: calc(100% - 2rem);
   border-radius: unset;
+  backdrop-filter: blur(10px);
   z-index: 100;
 }
 
 form input:focus,
 form input:hover {
-  backdrop-filter: blur(10px);
   box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.1),
     5px 5px 10px rgba(0, 0, 0, 0.4),
     inset -5px -5px 10px rgba(255, 255, 255, 0.1),
@@ -331,25 +331,25 @@ form .filters button.active {
 }
 
 @media only screen and (max-width: 768px) {
-  .title * {
-    font-size: 1.5rem;
+  .title {
+    font-size: 2rem;
   }
 
   .title .subtitle {
     font-size: 0.75rem;
   }
 
-  nav a {
+  header a {
     font-size: 0.75rem;
   }
 
-  nav a div {
+  header a div {
     gap: 0.25rem;
   }
 
   form input {
     padding: 1rem;
-    width: calc(100% - 3rem);
+    width: calc(100% - 2rem);
   }
 
   form .filters {

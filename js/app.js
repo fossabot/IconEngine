@@ -51,8 +51,6 @@ async function prepareIcons() {
 
   //Adding a listener to user page scrolling
   window.onscroll = () => {
-    console.log(window.scrollY);
-    console.log();
     if (window.scrollY > searchBoxY) {
       searchBox.classList.add("scrolled");
     } else {
