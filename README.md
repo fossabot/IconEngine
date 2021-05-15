@@ -1,7 +1,7 @@
 <p align="center">
 	<img src="https://user-images.githubusercontent.com/62962597/118317464-54fcfb80-b50d-11eb-8a20-b811532a3efa.png" alt="IconEngine By Reza Kelidari"/><br>
-	A collection of 100+ free high quality MIT licensed MIT icons for use in your web projects.<br>
-<a href="https://rezakelidari.github.io/IconEngine/" target="_blank">Browse at our site</a>
+	A collection of 100+ free high quality MIT licensed icons for use in your web projects.<br>
+	<a href="https://rezakelidari.github.io/IconEngine/" target="_blank">Browse at our site</a>
 </p>
 
 ## Basic Usage
