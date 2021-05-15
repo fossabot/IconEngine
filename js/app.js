@@ -1,6 +1,9 @@
 // Search section
 const search_box = document.querySelector("#search");
 const filters = document.querySelectorAll("form .filters button");
+const result = document.querySelector(".result");
+const noResult = document.querySelector(".no_result");
+const loading = document.querySelector(".loading");
 let iconsList = document.querySelector(".result .icons_list");
 let iconsNumberElement = document.querySelector(".icons-number");
 let filter = 0;
@@ -13,6 +16,7 @@ function getIcons() {
 }
 
 async function prepareIcons() {
+  result.classList.toggle("hide");
   //Receive icons fron getIcon function, which receives them from the json file
   icons = await getIcons();
   iconsNumbers = icons.length;
@@ -25,6 +29,10 @@ async function prepareIcons() {
     let li = `<li onclick="copy(${i})"><div class="icon">${code}</div><div class="tag">${tag}</div><input type="text" class="code" value='${code}'/>`;
     iconsList.innerHTML += li;
   }
+
+  loading.classList.toggle("hide");
+  result.classList.toggle("hide");
+  noResult.className = "no_result hide";
 
   //Change variable to an array of icons
   iconsList = document
@@ -86,7 +94,8 @@ function hideAll() {
     iconsList[i].style.display = "none";
   }
   iconsNumbers = 0;
-  updateResult();
+  noResult.className = "no_result";
+  noResult.innerText = "Your search for \"" + search_box.value + "\" did not return any results";
 }
 
 function copy(index) {
@@ -141,5 +150,8 @@ function show(index = null) {
 
 function updateResult() {
   iconsNumberElement.innerText = "Result: " + iconsNumbers + " Icons";
+  if (iconsNumbers === 0) {
+    hideAll()
+  }
 }
 // End Search section
