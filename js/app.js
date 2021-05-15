@@ -4,34 +4,32 @@ const filters = document.querySelectorAll("form .filters button");
 let iconsList = document.querySelector(".result .icons_list");
 let iconsNumberElement = document.querySelector(".icons-number");
 let filter = 0;
-let icons;
+let icons = [];
 let iconsNumbers;
 
-//Getting icons from json file
-let rawFile = new XMLHttpRequest();
-rawFile.open("GET", "http://127.0.0.1:5500/js/data/icons.json", true);
-rawFile.onReadyStateChange = () => {
-  if (rawFile.readyState === 4) {
-    icons = JSON.parse(rawFile.responseText);
-    console.log(rawFile.responseText)
-    console.log(icons)
-    iconsNumbers = icons.length;
-    console.log(iconsNumbers)
+//Receive icons from json file
+function getIcons() {
+  return fetch("icons.json").then((response) => response.json());
+}
 
-    //Add icons
-    for (i = 0; i < icons.length; i++) {
-      let code = icons[i].code;
-      let tag = icons[i].tag;
+async function prepareIcons() {
+  //Receive icons fron getIcon function, which receives them from the json file
+  icons = await getIcons();
+  iconsNumbers = icons.length;
 
-      let li = `<li onclick="copy(${i})"><div class="icon">${code}</div><div class="tag">${tag}</div><input type="text" class="code" value='${code}'/>`;
-      iconsList.innerHTML += li;
-    }
+  //Add icons
+  for (i = 0; i < icons.length; i++) {
+    let code = icons[i].code;
+    let tag = icons[i].tag;
 
-    //Change variable to an array of icons
-    iconsList = document
-      .querySelector(".result .icons_list")
-      .querySelectorAll("li");
+    let li = `<li onclick="copy(${i})"><div class="icon">${code}</div><div class="tag">${tag}</div><input type="text" class="code" value='${code}'/>`;
+    iconsList.innerHTML += li;
   }
+
+  //Change variable to an array of icons
+  iconsList = document
+    .querySelector(".result .icons_list")
+    .querySelectorAll("li");
 
   updateResult();
 
@@ -47,33 +45,33 @@ rawFile.onReadyStateChange = () => {
       for (i = 0; i < iconsList.length; i++) {
         iconTag = iconsList[i].querySelector(".tag").innerText;
         iconTagName = iconTag.toUpperCase();
-  
+
         if (iconTagName.indexOf(searchIndex) > -1) {
           result.push(i);
         }
       }
-  
+
       result.length > 0 ? show(result) : hideAll();
       updateResult();
     }
   };
-};
-rawFile.send(null);
 
+  for (i = 0; i < filters.length; i++) {
+    let filterButton = filters[i];
+    let index = i;
+    filterButton.onclick = () => {
+      filters.forEach((element) => {
+        element.className = "";
+      });
 
-for (i = 0; i < filters.length; i++) {
-  let filterButton = filters[i];
-  let index = i;
-  filterButton.onclick = () => {
-    filters.forEach((element) => {
-      element.className = "";
-    });
-
-    filter = index;
-    filterButton.className = "active";
-    show();
-  };
+      filter = index;
+      filterButton.className = "active";
+      show();
+    };
+  }
 }
+
+prepareIcons();
 
 function showAll() {
   for (i = 0; i < iconsList.length; i++) {
