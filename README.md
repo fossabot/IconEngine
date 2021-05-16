@@ -1,6 +1,6 @@
 <p align="center">
 	<img src="https://user-images.githubusercontent.com/62962597/118317464-54fcfb80-b50d-11eb-8a20-b811532a3efa.png" alt="IconEngine By Reza Kelidari"/><br>
-	A collection of 100+ free high quality MIT licensed icons for use in your web projects.<br>
+	This is a icon search engine that contains a collection of 100+ free high quality MIT licensed icons for use in your web projects; Developed By reza kelidari & fully open-source!<br>
 	<a href="https://rezakelidari.github.io/IconEngine/" target="_blank">Browse at our site</a>
 </p>
 
@@ -12,7 +12,7 @@ The quickest way to use these icons is to simply copy the source for the icon yo
 </svg>
 ```
 
-- Some icons also have a `solid` shape.
+- Some icons also have a `Solid` shape, they are characterized by a `S` at the end of their tag.
 - `Outline` and `Solid` filters are available for easy search
 
 ## License

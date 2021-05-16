@@ -8,21 +8,28 @@
       name="keywords"
       content="Icon Engine, Icon Search Engine, Icon8, Flaticon, Shutterstuck, Icon, Free icon, SVG, SVG Converter, Svg Icon, Reza, Reza Kelidari, Reza Kelidari Alone, Reza Alone"
     />
-    <meta name="google-site-verification" content="6On1dv9cMUzZ-tBHPxext6r7MJWpGksbZXb6eFVEZws" />
+    <meta
+      name="google-site-verification"
+      content="6On1dv9cMUzZ-tBHPxext6r7MJWpGksbZXb6eFVEZws"
+    />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Icon Engine | A collection of 100+ free high quality MIT licensed MIT icons</title>
+    <title>
+      Icon Engine | A collection of 100+ free high quality SVG icons
+    </title>
     <meta
       name="description"
       content="A collection of 100+ free high quality MIT licensed MIT icons for use in your web projects. Developed By reza kelidari & fully open-source"
     />
   </head>
   <body oncontextmenu="return false">
+    <!-- Header section -->
     <header>
-      <img src="https://user-images.githubusercontent.com/62962597/118317464-54fcfb80-b50d-11eb-8a20-b811532a3efa.png" alt="IconEngine By reza kelidari" class="banner">
-      <div class="subtitle">
-        A collection of 100+ free high quality MIT licensed MIT icons for use in
-        your web projects.
-      </div>
+      <h1 class="title"><span>I</span>con <span>E</span>ngine</h1>
+      <p class="subtitle">
+        This is a icon search engine that contains a collection of 100+ free
+        high quality MIT licensed icons for use in your web projects; Developed
+        By reza kelidari & fully open-source!
+      </p>
       <a href="https://github.com/rezakelidari/IconEngine" target="_blank">
         <div>
           <svg
@@ -43,6 +50,9 @@
         </div>
       </a>
     </header>
+    <!-- End Header section -->
+
+    <!-- Search section -->
     <form action="#">
       <input
         type="text"
@@ -58,16 +68,24 @@
         <button class="button">Solid</button>
       </div>
     </form>
+    <!-- End Search section -->
 
+    <!-- Search result section -->
     <div class="result container">
-      <h1 class="icons-number"></h1>
+      <div class="icons-number"></div>
       <ul class="icons_list"></ul>
       <div class="no_result"></div>
     </div>
+    <!-- End Search result section -->
+
+    <!-- Loading Section -->
     <div class="loading">
       <span class="loader"></span>
       Loading...
     </div>
+    <!-- End Loading Section -->
+
+    <!-- Copy message section -->
     <div class="copied hide">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -85,6 +103,64 @@
       </svg>
       Copied svg code!
     </div>
+    <!-- End Copy message section -->
+
+    <!-- Footer section -->
+    <footer>
+      <div class="col-title">
+        <h1 class="title"><span>I</span>con <span>E</span>ngine</h1>
+        <p class="subtitle">
+          This is a icon search engine that contains a collection of 100+ free
+          high quality MIT licensed icons for use in your web projects;
+          Developed By reza kelidari & fully open-source!
+        </p>
+        <a href="https://github.com/rezakelidari/IconEngine" target="_blank">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#ffffff"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+            Open in github
+          </div>
+        </a>
+      </div>
+      <div class="col-links"></div>
+    </footer>
+    <!-- End Footer section -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+    <!-- Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyAEqVCsFDUUwqG0InABRtYlgw4M-7JkcX0",
+        authDomain: "iconengine-6198d.firebaseapp.com",
+        projectId: "iconengine-6198d",
+        storageBucket: "iconengine-6198d.appspot.com",
+        messagingSenderId: "790076494607",
+        appId: "1:790076494607:web:0e5741d383ac8c5023a47a",
+        measurementId: "G-XS6BPG1LE1",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
     <script src="js/app.js"></script>
   </body>
 </html>

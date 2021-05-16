@@ -1,4 +1,5 @@
 // Search section
+const form = document.querySelector("form");
 const searchBox = document.querySelector("#search");
 const filters = document.querySelectorAll("form .filters button");
 const result = document.querySelector(".result");
@@ -16,9 +17,11 @@ function getIcons() {
   return fetch("icons.json").then((response) => response.json());
 }
 
+//Making form & reult section hide for loading
+form.classList.toggle("hide");
+result.classList.toggle("hide");
+
 async function prepareIcons() {
-  //Making reult section hide for loading
-  result.classList.toggle("hide");
   //Receive icons fron getIcon function, which receives them from the json file
   icons = await getIcons();
   iconsNumbers = icons.length;
@@ -75,7 +78,7 @@ async function prepareIcons() {
   }
 }
 
-prepareIcons();
+//prepareIcons();
 
 //The "Search" function is used when searching for an icon or changing filters
 function search() {
