@@ -590,6 +590,11 @@
     "type": 2
   },
   {
+    "tag": "Instagram",
+    "code": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon\" width=\"75\" height=\"75\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ffffff\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M16.08,20.5H7.92c-2.56,0-4.64-2.08-4.64-4.64V7.69c0-2.56,2.08-4.64,4.64-4.64h8.17c2.56,0,4.64,2.08,4.64,4.64v8.17C20.72,18.42,18.64,20.5,16.08,20.5z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M11.96,15.87L11.96,15.87c2.26,0,4.1-1.83,4.1-4.1v0c0-2.26-1.83-4.1-4.1-4.1h0c-2.26,0-4.1,1.83-4.1,4.1v0C7.86,14.04,9.69,15.87,11.96,15.87z\"/><circle stroke-linecap=\"round\" stroke-miterlimit=\"10\" cx=\"17.12\" cy=\"6.38\" r=\"0.26\"/></svg>",
+    "type": 1
+  },
+  {
     "tag": "Key",
     "code": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon\" width=\"75\" height=\"75\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ffffff\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z\"/></svg>",
     "type": 1
@@ -862,6 +867,11 @@
   {
     "tag": "Sun S",
     "code": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon\" width=\"75\" height=\"75\" viewBox=\"0 0 20 20\" fill=\"#ffffff\" stroke=\"none\"><path fill-rule=\"evenodd\" d=\"M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z\" clip-rule=\"evenodd\"/></svg>",
+    "type": 2
+  },
+  {
+    "tag": "Telegram",
+    "code": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon\" width=\"75\" height=\"75\" viewBox=\"0 0 20 20\" fill=\"#ffffff\" stroke=\"none\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M19.42,3.5l-2.86,13.48c-0.21,0.95-0.78,1.19-1.58,0.74l-4.36-3.21l-2.1,2.02c-0.23,0.23-0.43,0.43-0.88,0.43l0.31-4.44l8.07-7.3c0.35-0.31-0.08-0.49-0.55-0.17l-9.98,6.28L1.21,10C0.28,9.71,0.26,9.06,1.41,8.62l16.8-6.48C18.99,1.85,19.67,2.31,19.42,3.5z\"/></svg>",
     "type": 2
   },
   {
