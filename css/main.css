@@ -25,7 +25,6 @@ body {
   align-items: center;
   flex-direction: column;
   overflow-x: hidden;
-  padding: 0 0 1rem 0;
 }
 
 .title {
@@ -65,7 +64,11 @@ body {
 }
 
 .button {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.3));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(0, 0, 0, 0.3)
+  );
   box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.15),
     5px 5px 10px rgba(0, 0, 0, 0.6);
   border-radius: 20px;
@@ -104,17 +107,13 @@ header a:not(.title):hover::after {
   height: 2px;
   width: 100%;
   background: linear-gradient(to right, transparent, teal, transparent);
-  bottom: -0.5rem;
+  bottom: -0.2rem;
 }
 
 header a div {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-header .banner {
-  width: 50%;
 }
 
 header .heading {
@@ -179,7 +178,7 @@ form input::placeholder {
 }
 
 form input::before {
-  content: 'Type';
+  content: "Type";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -216,7 +215,7 @@ form .filters .button.active {
 
 /* Result section */
 .result {
-  background-color: #ffffff0f;
+  background: #ffffff0f;
   width: 65vw;
   border-radius: 40px;
   padding: 2rem;
@@ -274,6 +273,7 @@ form .filters .button.active {
   align-items: center;
   justify-content: center;
   height: 300px;
+  padding: 0 0 200px 0;
   font-size: 3rem;
   gap: 2rem;
 }
@@ -297,23 +297,21 @@ form .filters .button.active {
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
+  animation: 0.3s ease show forwards;
   gap: 0.5rem;
   bottom: 1rem;
-  left: 1rem;
   padding: 0.5rem 1rem;
   backdrop-filter: blur(25px);
   box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.1),
     5px 5px 10px rgba(0, 0, 0, 0.4);
   font-size: 1.25rem;
   z-index: 100;
-  opacity: 1;
-  transition: 0.3s ease all;
   border-radius: 12px;
 }
 
 .copied.hide {
-  opacity: 0;
+  animation: 0.3s ease hide forwards;
 }
 /* End Copy section */
 
@@ -321,32 +319,61 @@ form .filters .button.active {
 footer {
   width: calc(100vw - 4rem);
   padding: 2rem;
-  background: rgba(0, 255, 255, 0.1);
+  display: flex;
+  margin: 2rem 0 0 0;
+  align-items: flex-start;
+  background: #ffffff0f;
   height: fit-content;
 }
 
 footer .col-title {
+  height: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
   gap: 1rem;
-  flex: 1 1 auto;
+  flex: 1;
 }
 
 footer .col-title .title {
   text-align: start;
   font-size: 2rem;
 }
+
 footer .col-title .subtitle {
   text-align: start;
   font-size: 0.7rem;
+  width: 300px;
+}
+
+footer .col-links,
+footer .col-social {
+  height: 100%;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex: 1;
+}
+
+footer .col-links ul,
+footer .col-social ul {
+  list-style: none;
+  margin: 0.5rem 0 0 0;
+}
+
+footer .col-links ul li,
+footer .col-social ul li {
+  margin: 0.5rem 0 0 0;
+  display: flex;
 }
 
 footer a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.7rem;
   position: relative;
   transition: 0.3s ease all;
 }
@@ -357,13 +384,18 @@ footer a:hover::after {
   height: 2px;
   width: 100%;
   background: linear-gradient(to right, transparent, teal, transparent);
-  bottom: -0.5rem;
+  bottom: -0.2rem;
 }
 
 footer a div {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+footer a .icon {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 /* End Footer section */
 
@@ -376,16 +408,37 @@ footer a div {
     transform: rotate(360deg);
   }
 }
+
+@keyframes show {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes hide {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
 /* End Animations */
 
 /* Medias */
 @media only screen and (max-width: 960px) {
-  body {
-    padding: 0;
-  }
   .result {
     width: calc(100vw - 5rem);
     border-radius: 40px 40px 0 0;
+  }
+
+  footer {
+    margin: unset;
   }
 }
 
@@ -419,11 +472,15 @@ footer a div {
   .result {
     width: 100vw;
     border-radius: 40px 40px 0 0;
-    padding: 1.5rem 0;
   }
 
   .result ul {
     gap: 1.5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 3rem;
   }
 }
 /* End Medias */

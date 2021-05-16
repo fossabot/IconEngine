@@ -1,7 +1,7 @@
 // Search section
 const form = document.querySelector("form");
 const searchBox = document.querySelector("#search");
-const filters = document.querySelectorAll("form .filters button");
+const filters = form.querySelectorAll(".filters button");
 const result = document.querySelector(".result");
 const noResult = document.querySelector(".no_result");
 const loading = document.querySelector(".loading");
@@ -78,7 +78,7 @@ async function prepareIcons() {
   }
 }
 
-//prepareIcons();
+prepareIcons();
 
 //The "Search" function is used when searching for an icon or changing filters
 function search() {
@@ -133,9 +133,9 @@ function copy(index) {
   const copyMessage = document.querySelector(".copied");
   let value = icons[index].code;
   navigator.clipboard.writeText(value);
-  copyMessage.className = "copied";
+  copyMessage.classList.toggle("hide");
   setTimeout(() => {
-    copyMessage.className = "copied hide";
+    copyMessage.classList.toggle("hide");
   }, 1500);
 }
 
