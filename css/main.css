@@ -113,7 +113,7 @@ header a div {
   gap: 0.5rem;
 }
 
-header img {
+header .banner {
   width: 50%;
 }
 
