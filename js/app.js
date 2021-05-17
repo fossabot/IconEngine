@@ -991,16 +991,18 @@ function prepareIcons() {
   ];
   iconsNumbers = icons.length;
 
+  //Add icons
   for (i = 0; i < icons.length; i++) {
-    //Add icons
     let code = icons[i].code;
     let tag = icons[i].tag;
 
     let li = `<li class="button" onclick="copy(${i})"><div class="icon">${code}</div><div class=tag>${tag}</div><input type="text" class="code" value='${code}'/>`;
     iconsList.innerHTML += li;
-  } //repairing result section and hidding loading & noResult section
+  }
+  //repairing result section and hidding loading & noResult section
   loading.classList.toggle("hide");
   result.classList.toggle("hide");
+  form.classList.toggle("hide");
   noResult.className = "no_result hide";
 
   //Change variable to an array of icons
