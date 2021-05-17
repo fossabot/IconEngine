@@ -117,10 +117,8 @@ header a div {
   gap: 0.5rem;
 }
 
-header .heading {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+header .subtitle {
+  text-align-last: center;
 }
 
 header .icon {
