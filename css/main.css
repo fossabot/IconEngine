@@ -40,7 +40,8 @@ body {
 .subtitle {
   font-size: 1rem;
   max-width: 400px;
-  text-align: center;
+  text-align: justify;
+  text-align-last: left;
 }
 
 .container {
@@ -342,9 +343,8 @@ footer .col-title .title {
 }
 
 footer .col-title .subtitle {
-  text-align: start;
   font-size: 0.7rem;
-  width: 300px;
+  max-width: 300px;
 }
 
 footer .col-links,
@@ -476,12 +476,13 @@ footer a .icon {
 
   form input {
     padding: 1rem;
-    width: unset;
+    width: calc(100vw - 3rem);
   }
 
   form .filters {
     padding: 1rem;
-    width: unset;
+    width: calc(100vw - 3rem);
+    overflow: auto;
   }
 
   .result {
@@ -503,7 +504,7 @@ footer a .icon {
   
   .result ul li {
     background: #ffffff0f;
-    width: calc(50vw - 4rem);
+    width: 45;
     height: 7.5rem;
     gap: 1rem;
     box-shadow: unset;
