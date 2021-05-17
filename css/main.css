@@ -485,7 +485,7 @@ footer a .icon {
   }
 
   .result {
-    width: 100vw;
+    width: (100vw - 4rem);
     border-radius: 40px 40px 0 0;
   }
 
@@ -503,7 +503,7 @@ footer a .icon {
   
   .result ul li {
     background: #ffffff0f;
-    width: calc(50vw - 2rem);
+    width: calc(50vw - 4rem);
     height: 7.5rem;
     gap: 1rem;
     box-shadow: unset;
