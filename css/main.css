@@ -476,12 +476,12 @@ footer a .icon {
 
   form input {
     padding: 1rem;
-    width: 70vw;
+    width: unset;
   }
 
   form .filters {
     padding: 1rem;
-    width: 70vw;
+    width: unset;
   }
 
   .result {
