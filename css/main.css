@@ -411,21 +411,21 @@ footer a .icon {
 
 @keyframes show {
   0% {
-    transform: scale(0);
+    transform: translateY(100px);
   }
 
   100% {
-    transform: scale(1);
+    transform: translateY(0px);
   }
 }
 
 @keyframes hide {
   0% {
-    transform: scale(1);
+    transform: translateY(0);
   }
 
   100% {
-    transform: scale(0);
+    transform: translateY(100px);
   }
 }
 /* End Animations */
@@ -461,12 +461,12 @@ footer a .icon {
 
   form input {
     padding: 1rem;
-    width: calc(100vw - 3rem);
+    width: 70vw;
   }
 
   form .filters {
     padding: 1rem;
-    width: calc(100vw - 3rem);
+    width: 70vw;
   }
 
   .result {
@@ -476,6 +476,32 @@ footer a .icon {
 
   .result ul {
     gap: 1.5rem;
+  }
+
+  .result ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .result ul li {
+    width: 10rem;
+    height: 4rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    transition: 0.3s ease all;
+    overflow: hidden;
+    padding: 0 0.5rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  .result ul li:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
   }
 
   footer {
