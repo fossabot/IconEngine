@@ -102,7 +102,7 @@ header a {
   transition: 0.3s ease all;
 }
 
-header a:not(.title):hover::after {
+header a:hover::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -385,6 +385,10 @@ footer a:hover::after {
   bottom: -0.2rem;
 }
 
+footer a.title:hover::after {
+  display: none;
+}
+
 footer a div {
   display: flex;
   align-items: center;
@@ -394,6 +398,10 @@ footer a div {
 footer a .icon {
   height: 1.5rem;
   width: 1.5rem;
+}
+
+footer a.title {
+  font-size: 0.7rem;
 }
 /* End Footer section */
 

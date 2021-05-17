@@ -114,12 +114,17 @@ icons = [
     type: 2,
   },
   {
-    tag: "Badge",
+    tag: "Badge S",
+    code: '<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="75" height="75" viewBox="0 0 20 20" fill="#ffffff" stroke="none"><path d="M15.8,6.38c-0.23-1.15-0.79-2.2-1.62-3.03c-0.83-0.83-1.88-1.39-3.03-1.62C10,1.5,8.81,1.62,7.73,2.07s-2,1.21-2.65,2.18c-0.65,0.97-1,2.12-1,3.29c0,1.57,0.62,3.07,1.73,4.18s2.61,1.73,4.18,1.73c1.17,0,2.31-0.35,3.29-1c0.97-0.65,1.73-1.57,2.18-2.65C15.91,8.71,16.02,7.52,15.8,6.38z M11.62,10.03L10,9.18l-1.63,0.85l0.31-1.81L7.37,6.94l1.82-0.26L10,5.03l0.81,1.65l1.82,0.26l-1.31,1.28L11.62,10.03z"/><path fill="#058181aa" d="M17.46,15.18l-2.87-4.98c-0.08-0.14-0.18-0.25-0.31-0.34C14.15,9.78,14,9.73,13.85,9.71c-0.15-0.02-0.31,0-0.46,0.06c-0.14,0.06-0.27,0.15-0.38,0.26c-0.36,0.45-0.82,0.81-1.35,1.06c-0.52,0.25-1.09,0.38-1.67,0.38c-0.58,0-1.15-0.13-1.67-0.37c-0.52-0.25-0.98-0.61-1.35-1.05C6.88,9.92,6.75,9.83,6.6,9.77C6.46,9.72,6.3,9.7,6.15,9.71C6,9.73,5.85,9.79,5.72,9.87c-0.13,0.09-0.24,0.2-0.31,0.34l-2.87,4.98c-0.04,0.07-0.06,0.15-0.06,0.24c0,0.06,0.01,0.13,0.03,0.19c0.02,0.06,0.06,0.12,0.1,0.16c0.04,0.05,0.1,0.08,0.16,0.11c0.06,0.03,0.12,0.04,0.19,0.04l2.55,0.04l1.3,2.18c0.05,0.07,0.11,0.13,0.18,0.18c0.12,0.06,0.25,0.08,0.38,0.04c0.13-0.03,0.23-0.12,0.3-0.23L10,14.08l2.34,4.05c0.07,0.11,0.18,0.19,0.3,0.23c0.13,0.03,0.26,0.02,0.38-0.04c0.07-0.05,0.13-0.11,0.18-0.18l1.3-2.18l2.55-0.04c0.06,0,0.13-0.01,0.19-0.04c0.06-0.03,0.11-0.06,0.16-0.11c0.04-0.05,0.08-0.1,0.1-0.16c0.02-0.06,0.03-0.12,0.03-0.19C17.52,15.34,17.5,15.26,17.46,15.18z"/></svg>',
+    type: 2,
+  },
+  {
+    tag: "Badge Check",
     code: '<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="75" height="75" viewBox="0 0 24 24" fill="none" stroke="#ffffff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>',
     type: 1,
   },
   {
-    tag: "Badge S",
+    tag: "Badge Check S",
     code: '<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="75" height="75" viewBox="0 0 20 20" fill="#ffffff" stroke="none"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>',
     type: 2,
   },
@@ -1185,37 +1190,57 @@ for (i = 0; i < filters.length; i++) {
 function search() {
   //Getting search index
   let index = searchBox.value;
-  if (index !== 0) {
+
+  if (index.length !== 0) {
     //Is the search index not empty?
     //Making an array for results
     let result = [];
     //Making index uppercase to remove case sensitivity
     let searchIndex = index.toUpperCase();
+
+    //Is any filter applied
     for (i = 0; i < iconsList.length; i++) {
       //Searching in icons
-      iconTag = iconsList[i].querySelector(".tag").innerText;
+      iconTag = icons[i].tag;
       iconTagName = iconTag.toUpperCase();
 
+      //Does icon match index?
       if (iconTagName.indexOf(searchIndex) > -1) {
-        //Does icon match index?
-        result.push(i);
+        //Does icon match filter
+        if (filter !== 0 && icons[i].type === filter) {
+          result.push(i);
+        } else if (filter === 0) {
+          result.push(i);
+        }
       }
     }
+
+    iconsNumbers = result.length;
+    updateResultsNumber();
     //If search have result, show the result; otherwise hide all icons
     result.length > 0 ? show(result) : hideAll();
   } else {
     //Or is it empty?
-    showAll();
+    if (filter === 0) {
+      iconsNumbers = icons.length;
+      updateResultsNumber();
+      showAll();
+    } else {
+      show();
+      iconsNumbers = 0;
+      for (const icon of icons) {
+        icon.type === filter ? iconsNumbers++ : false;
+      }
+      updateResultsNumber();
+    }
   }
 }
 
 //The "Show All" function is used when the page is loaded, the "All" is selected in filters, or the search box is cleared.
 function showAll() {
-  for (i = 0; i < iconsList.length; i++) {
+  for (i = 0; i < icons.length; i++) {
     iconsList[i].style.display = "";
   }
-  iconsNumbers = icons.length;
-  updateResultsNumber();
 }
 
 //The "Hide All" function is used when the search has no results
@@ -1223,7 +1248,6 @@ function hideAll() {
   for (i = 0; i < iconsList.length; i++) {
     iconsList[i].style.display = "none";
   }
-  iconsNumbers = 0;
   noResult.className = "no_result";
   noResult.innerText =
     'Your search for "' + searchBox.value + '" did not return any results';
@@ -1242,15 +1266,14 @@ function copy(index) {
 
 //The "Show" function used when user search an icon or change filters or both
 function show(index = null) {
-  //Set iconsNumber 0 for updating that
-  iconsNumbers = 0;
+  //Is user only changed filters?
   if (index == null) {
-    //Is user only changed filters?
-    if (filter == 0) {
-      //Is user selected "All" in filters?
+    //Is user selected "All" in filters?
+    if (filter === 0) {
       showAll();
-    } else {
-      //Or selected another filter?
+    }
+    //Or selected another filter?
+    else {
       for (i = 0; i < iconsList.length; i++) {
         //Prepare icons as selected filter
         if (icons[i].type == filter) {
@@ -1263,18 +1286,15 @@ function show(index = null) {
         }
       }
     }
-    //Then updating numbers of result
-    updateResultsNumber();
   } else {
     //Or searched an icon or both?
-    if (filter == 0) {
+    if (filter === 0) {
       //Is only searche an icon?
-      for (i = 0; i < iconsList.length; i++) {
+      for (i = 0; i < icons.length; i++) {
         //Prepare icons as search
         if (index.includes(i)) {
           //Does icon match the search index?
           iconsList[i].style.display = "";
-          iconsNumbers++;
         } else {
           //Or doesn't?
           iconsList[i].style.display = "none";
@@ -1287,7 +1307,6 @@ function show(index = null) {
         if (index.includes(i) && icons[i].type == filter) {
           //Does icon match the search index and filter?
           iconsList[i].style.display = "";
-          iconsNumbers++;
         } else {
           //Or doesn't?
           iconsList[i].style.display = "none";
@@ -1295,14 +1314,13 @@ function show(index = null) {
       }
     }
   }
-  //Then updating numbers of result
-  updateResultsNumber();
 }
 
+//Updating numbers of icons
 function updateResultsNumber() {
-  //Updating numbers of icons
   //Setting numbers of icons
-  iconsNumberElement.innerText = "Result: " + iconsNumbers + " Icons";
+  iconsNumberElement.innerText =
+    iconsNumbers === 0 ? "No result" : "Result: " + iconsNumbers + " icons";
   if (iconsNumbers === 0) {
     //Is no icon displayed?
     hideAll();
