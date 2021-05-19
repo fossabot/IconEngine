@@ -1,22 +1,23 @@
 // Search section
-const form = document.querySelector("form");
-const searchBox = document.querySelector("#search");
-const filters = form.querySelectorAll(".filters button");
-const result = document.querySelector(".result");
-const noResult = document.querySelector(".no_result");
-const loading = document.querySelector(".loading");
-let iconsList = document.querySelector(".result .icons_list");
-let iconsNumberElement = document.querySelector(".icons-number");
-let filter = 0;
-let icons = [];
-let iconsNumbers;
-let searchBoxY = searchBox.getBoundingClientRect().top;
+const form = document.querySelector("form"),
+  searchBox = document.querySelector("#search"),
+  filters = form.querySelectorAll(".filters button"),
+  result = document.querySelector(".result"),
+  noResult = document.querySelector(".no_result"),
+  loading = document.querySelector(".loading");
+let iconsList = document.querySelector(".result .icons_list"),
+  iconsNumberElement = document.querySelector(".icons-number"),
+  filter = 0,
+  icons = [],
+  iconsNumbers,
+  searchBoxY = searchBox.getBoundingClientRect().top;
 
 //Making form & reult section hide for loading
 form.classList.toggle("hide");
 result.classList.toggle("hide");
 
-//This is an array that contains all icons in this site
+//This is an array of objects that contains all icons in this site
+//Every object have 3 property: tag, code, type
 icons = [
   {
     tag: "Adjustments",
@@ -1109,36 +1110,43 @@ icons = [
     type: 2,
   },
 ];
-iconsNumbers = icons.length;
 
-//Add icons
+//Adding icons
 for (const icon of icons) {
+  //Getting tag & code of icon
   let code = icon.code;
   let tag = icon.tag;
 
+  //Creating li element
   let li = document.createElement("li");
   li.className = "button";
   li.setAttribute("onclick", `copy(${icons.indexOf(icon)})`);
 
+  //Creating icon element
   let iconTag = document.createElement("div");
   iconTag.className = "icon";
   iconTag.innerHTML = code;
 
+  //Creating tag element
   let tagTag = document.createElement("div");
   tagTag.className = "tag";
   tagTag.innerHTML = tag;
 
+  //Creating input element, that must be hidden and contains source code of icon
   let inputTag = document.createElement("input");
   inputTag.setAttribute("type", "text");
   inputTag.className = "code";
   inputTag.innerText = code;
 
+  //Adding elements to li element
   li.appendChild(iconTag);
   li.appendChild(tagTag);
   li.appendChild(inputTag);
 
+  //Adding made element to the list of icons to display to the user
   iconsList.append(li);
 
+  //This method has a lower quality than the high method
   //let li = `<li class="button" onclick="copy(${icons.indexOf(icon)})"><div class="icon">${code}</div><div class="tag">${tag}</div><input type="text" class="code" value='${code}'/>`;
   //iconsList.innerHTML = li;
 }
@@ -1154,6 +1162,7 @@ iconsList = document
   .querySelector(".result .icons_list")
   .querySelectorAll("li");
 
+iconsNumbers = icons.length;
 updateResultsNumber();
 
 //Adding a listener to user keyboard keys clicking
@@ -1191,26 +1200,24 @@ function search() {
   //Getting search index
   let index = searchBox.value;
 
+  //Is the search index not empty?
   if (index.length !== 0) {
-    //Is the search index not empty?
     //Making an array for results
     let result = [];
     //Making index uppercase to remove case sensitivity
     let searchIndex = index.toUpperCase();
 
-    //Is any filter applied
-    for (i = 0; i < iconsList.length; i++) {
-      //Searching in icons
-      iconTag = icons[i].tag;
+    for (const icon of icons) {
+      iconTag = icon.tag;
       iconTagName = iconTag.toUpperCase();
 
       //Does icon match index?
       if (iconTagName.indexOf(searchIndex) > -1) {
         //Does icon match filter
-        if (filter !== 0 && icons[i].type === filter) {
-          result.push(i);
+        if (filter !== 0 && icon.type === filter) {
+          result.push(icons.indexOf(icon));
         } else if (filter === 0) {
-          result.push(i);
+          result.push(icons.indexOf(icon));
         }
       }
     }
@@ -1219,35 +1226,45 @@ function search() {
     updateResultsNumber();
     //If search have result, show the result; otherwise hide all icons
     result.length > 0 ? show(result) : hideAll();
-  } else {
-    //Or is it empty?
-    if (filter === 0) {
-      iconsNumbers = icons.length;
-      updateResultsNumber();
-      showAll();
-    } else {
+  }
+  //Or is it empty?
+  else {
+    //Is any filter applied?
+    if (filter !== 0) {
+      //Show as filter
       show();
       iconsNumbers = 0;
+      //Get numbers of icons that match the filter
       for (const icon of icons) {
         icon.type === filter ? iconsNumbers++ : false;
       }
+      //Then update result number
       updateResultsNumber();
+    }
+    //Or not applied
+    else {
+      //Set numbers of icons to icons array length, because there is no any index or filter
+      iconsNumbers = icons.length;
+      updateResultsNumber();
+      showAll();
     }
   }
 }
 
 //The "Show All" function is used when the page is loaded, the "All" is selected in filters, or the search box is cleared.
 function showAll() {
-  for (i = 0; i < icons.length; i++) {
-    iconsList[i].style.display = "";
-  }
+  iconsList.forEach((iconInList) => {
+    iconInList.style.display = "";
+  });
 }
 
 //The "Hide All" function is used when the search has no results
 function hideAll() {
-  for (i = 0; i < iconsList.length; i++) {
-    iconsList[i].style.display = "none";
-  }
+  //Hide all icons
+  iconsList.forEach((iconInList) => {
+    iconInList.style.display = "none";
+  });
+  //Set noResult text
   noResult.className = "no_result";
   noResult.innerText =
     'Your search for "' + searchBox.value + '" did not return any results';
@@ -1255,9 +1272,10 @@ function hideAll() {
 
 //The "Copy" function is used when the user click on an icon
 function copy(index) {
+  //Copy the icon code
+  navigator.clipboard.writeText(icons[index].code);
+  //Show copied message, then hide that after 1500ms
   const copyMessage = document.querySelector(".copied");
-  let value = icons[index].code;
-  navigator.clipboard.writeText(value);
   copyMessage.classList.toggle("hide");
   setTimeout(() => {
     copyMessage.classList.toggle("hide");
