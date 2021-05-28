@@ -341,13 +341,18 @@ icons = [
   },
   {
     tag: "Database S",
-    code: '<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="75" height="75" viewBox="0 0 20 20" fill="#ffffff" stroke="none"><path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"></path><path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"></path><path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"/></svg>',
+    code: '<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="75" height="75" viewBox="0 0 20 20" fill="#ffffff" stroke="none"><path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"/><path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"/><path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"/></svg>',
     type: 2,
   },
   {
     tag: "Device Desktop",
     code: '<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="75" height="75" viewBox="0 0 24 24" fill="none" stroke="#ffffff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>',
     type: 1,
+  },
+  {
+    tag: "Device Desktop S",
+    code: '<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="75" height="75" viewBox="0 0 20 20" fill="#ffffff" stroke="none"><path d="M18.63,11.28V3.56c0-0.61-0.49-1.1-1.1-1.1H2.47c-0.61,0-1.1,0.49-1.1,1.1v7.72H18.63z"/><path d="M1.37,11.95v1.14c0,0.61,0.49,1.1,1.1,1.1h15.06c0.61,0,1.1-0.49,1.1-1.1v-1.14H1.37z"/><path d="M13.57,16.14h-0.89l-0.39-0.83c-0.14-0.29-0.43-0.47-0.75-0.47H8.45c-0.32,0-0.61,0.18-0.75,0.47l-0.39,0.83H6.43c-0.39,0-0.7,0.31-0.7,0.7s0.31,0.7,0.7,0.7h7.15c0.39,0,0.7-0.31,0.7-0.7S13.96,16.14,13.57,16.14z"/></svg>',
+    type: 2,
   },
   {
     tag: "Device Mobile",
