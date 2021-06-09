@@ -5,6 +5,8 @@
 </p>
 
 ## Basic Usage
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Frezakelidari%2FIconEngine.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Frezakelidari%2FIconEngine?ref=badge_shield)
+
 The quickest way to use these icons is to simply copy the source for the icon you need from [our site](https://rezakelidari.github.io/IconEngine/) and inline it directly into your HTML:
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="75" height="75" viewBox="0 0 24 24" fill="none" stroke="#ffffff">
@@ -17,3 +19,6 @@ The quickest way to use these icons is to simply copy the source for the icon yo
 
 ## License
 This library is MIT licensed.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Frezakelidari%2FIconEngine.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Frezakelidari%2FIconEngine?ref=badge_large)
